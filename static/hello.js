@@ -52,6 +52,11 @@ function enableButtons () {
 
 	// Update the button label now that the button is active
 	btn.value="Click me for a personal greeting";
+
+	btn = document.getElementById("input_greet_by_period");
+	btn.onclick=function(){greetByPeriod();};
+
+	btn.value="Click me for a period greeting";
 }
 
 /*
@@ -98,7 +103,7 @@ function greetByName () {
 	 var request = gapi.client.helloworldendpoints.greetByPeriod({'period': period,
  																																'name' : name});
 	 request.execute(sayHelloCallback)
-	 
+
  }
 // Process the JSON response
 // In this case, just show an alert dialog box
